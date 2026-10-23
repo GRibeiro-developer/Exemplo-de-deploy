@@ -67,15 +67,39 @@
         @apply focus:outline-none focus:ring-2 focus:ring-white;
     }
 
-    .dark .menu a{
+   .dark .menu a{
         @apply hover:bg-slate-800;
    }
 
    .botao-tema{
         @apply flex cursor-pointer items-center;
         @apply rounded-full border border-white/40;
-        
+        @apply bg-white/10 px-4 py-2 text-sm font-semibold;
+        @apply text-white transition-colors hover:bg-white/20;
+        @apply focus:outline-none focus:ring-2 focus:ring-white;
    }
 
+    .dark .botao-tema{
+        @apply border-slate-600 bg-slate-800;
+        @apply hover:bg-slate-700;
+   }
+
+   .tabela-responsiva{
+    @apply overflow-x-auto p-0;
+   }
+
+    .tbProduto{
+        @apply w-full min-w-3xl border-collapse text-left;
+   }
+
+   .tbProduto th{
+    @apply bg-indigo-600 px-4 py-3;
+    @apply text-xs font-bold uppercase tracking-wider;
+    @apply text-white;
+   }
+
+   .dark .tbProduto th{
+    @apply bg-slate-950 text-indigo-100;
+   }
 
 }
