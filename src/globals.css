@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer base{
+    *{
+        box-sizing:border-box;
+    }
+
+    body{
+        @apply m-0 min-w-80 font-sans;
+    }
+
+    buttons, input{
+        font:inherit;
+    }
+}
+
+@layer components{
+    .container{
+        @apply flex flex-col min-h-screen min-w-screen;
+        @apply bg-slate-100 text-slate-900;
+        @apply transition-colors duration-300;
+    }
+
+    .container.dark{
+        @apply bg-slate-950 text-slate-100;
+    }
+
+    .cabecalho{
+        @apply w-full bg-indigo-700 text-white shadow-lg;
+        @apply transition-colors duration-300;
+    }
+
+    .dark .cabecalho{
+        @apply border-b border-slate-800 bg-slate-800;
+    }
+
+    .cabecalho-conteudo{
+        @apply flex mx-auto w-full max-w-7xl;
+        @apply flex-col items-center justify-between;
+        @apply gap-5 px-4 py-5 md:flex-row;
+    }
+
+    .marca{
+        @apply text-center md:text-left;
+    }
+
+    .marca h1{
+        @apply text-xl font-bold tracking-tight sm:text-2xl;
+    }
+
+    .marca p{
+        @apply mt-1 text-xs text-indigo-100 sm:text-sm;
+    }
+
+   .dark .marca p{
+        @apply text-slate-400;
+    }
+
+    .menu{
+        @apply flex flex-wrap items-center justify-center;
+        @apply gap-1 sm:gap-2; 
+    }
+
+    .menu a{
+        @apply rounded-lg px-3 py-2 text-sm font-semibold;
+        @apply text-white transition-colors hover:bg-white/15;
+        @apply focus:outline-none focus:ring-2 focus:ring-white;
+    }
+
+    .dark .menu a{
+        @apply hover:bg-slate-800;
+   }
+
+   .botao-tema{
+        @apply flex cursor-pointer items-center;
+        @apply rounded-full border border-white/40;
+        
+   }
+
+
+}
